@@ -1,0 +1,212 @@
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0px;
+}
+
+body {
+  background-color: black;
+  max-width: 1300px;
+  margin: 50px auto;
+}
+
+#trombi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.trombiCard figure {
+  margin: 0px;
+}
+
+.trombiCard {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: solid 1px seashell;
+  -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+}
+
+.trombiCard figure {
+  position: relative;
+  background-color: #3084a3;
+  width: 100%;
+  /* max-width: 30%; */
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 40px !important;
+}
+
+.trombiCard figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 330px;
+  width: 100%;
+
+  opacity: 1;
+}
+
+.trombiCard figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2em;
+  /* margin: 5%; */
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+}
+
+.quisuisje {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: white !important;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.trombiCard .nameTitle h2,
+.trombiCard .nameTitle p {
+  padding-left: 10px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.trombiCard figcaption p {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 350;
+  line-height: 1.3;
+  margin: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .trombiCard figcaption p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .trombiCard figure:focus figcaption {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .trombiCard figure:focus {
+    transform: scale(1.123);
+  }
+
+  .trombiCard figure {
+    transition: transform 0.8s;
+  }
+
+  .trombiCard figure:focus .quisuisje {
+    visibility: hidden;
+  }
+
+  .trombiCard figcaption:focus {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .quisuisje {
+    animation: fadeInOut 3s infinite;
+  }
+
+  .trombiCard figure:focus img {
+    opacity: 0.7;
+  }
+
+  .trombiCard figure img {
+    transition: opacity 1s;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 60%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .quisuisje {
+    visibility: hidden;
+  }
+
+  .trombiCard figure:hover figcaption {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(0.887);
+  }
+
+  .trombiCard figure:hover {
+    transform: scale(1.123);
+  }
+
+  .trombiCard figure {
+    transition: transform 0.8s;
+  }
+
+  .trombiCard figcaption {
+    transition: all 3s;
+    /* transition: opacity 1s; */
+  }
+
+  .trombiCard:hover {
+    transform: none !important;
+  }
+
+  .trombiCard {
+    transition: all 0.5s;
+  }
+
+  .trombiCard figure:hover img {
+    opacity: 0.7;
+  }
+
+  .trombiCard figure img {
+    transition: opacity 1s;
+  }
+
+  .trombiCard:nth-child(1) {
+    transform: rotate(5deg);
+  }
+  .trombiCard:nth-child(2) {
+    transform: rotate(-5deg);
+  }
+  .trombiCard:nth-child(3) {
+    transform: rotate(5deg);
+  }
+  .trombiCard:nth-child(4) {
+    transform: rotate(-5deg);
+  }
+  .trombiCard:nth-child(5) {
+    transform: rotate(5deg);
+  }
+}
